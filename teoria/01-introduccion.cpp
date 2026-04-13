@@ -16,3 +16,8 @@ double inchesToCentimeters(double pulgadas) {
   assert(pulgadas >= 0);
   return 2.54 * pulgadas;
 }
+int main() {
+  cout << "Hola mundo \n";
+  cout << pulgadasACentimetros(10) << '\n';
+  return 0;
+}
