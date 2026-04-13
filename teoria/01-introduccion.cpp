@@ -1,4 +1,6 @@
 #include <iostream>
+// Si quieres desactivar todos los assert:
+//#define NDEBUG
 #include <cassert>
 using namespace std;
 double pulgadasACentimetros(double pulgadas) {
@@ -8,4 +10,9 @@ double pulgadasACentimetros(double pulgadas) {
   } else {
     return 2.54 * pulgadas;
   }
+}
+double inchesToCentimeters(double pulgadas) {
+  // Si falla TODO el programa terminará
+  assert(pulgadas >= 0);
+  return 2.54 * pulgadas;
 }
