@@ -19,3 +19,8 @@ int referencia() {
   cout << "num2: " << num2 << "\n";
   return 0;
 }
+int main() {
+  copia();
+  referencia();
+  return 0;
+}
