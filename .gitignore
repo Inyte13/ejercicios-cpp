@@ -1,11 +1,3 @@
-# Compilados
-*.exe
 *.o
 *.out
-
-# VSCode
-.vscode/
-
-# Windows
-Thumbs.db
-desktop.ini
+main
