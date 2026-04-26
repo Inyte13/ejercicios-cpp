@@ -1,2 +1,7 @@
 BasedOnStyle: Google
-ReflowComments: false
+# Ordenamos los includes alfabeticamente
+SortIncludes: true
+# Agrupa los includes
+IncludeBlocks: Regroup
+# Los espacios entre bloques
+SeparateDefinitionBlocks: Always
