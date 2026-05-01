@@ -1,27 +1,23 @@
-#include <iostream>
-
+template <typename T>  // Le decimos que este struct funciona con cualquier tipo
 struct Node {
-  int num;
+  T data;
   Node* next = nullptr;
+
+  Node() {}
+
+  // Constructor optimo
+  Node(const T& item) : data(item) {}
 };
 
 int main() {
-  Node* node3 = new Node;
-  node3->num = 3;
+  Node<int>* first = new Node<int>;
+  first->data = 1;
 
-  Node* node2 = new Node;
-  node2->num = 2;
-  node2->next = node3;
+  Node<int>* second = new Node<int>;
+  second->data = 2;
+  first->next = second;
 
-  Node* node1 = new Node;
-  node1->num = 1;
-  node1->next = node2;
-
-  // [1]──▶[2]──▶[3]──▶nullptr
-  Node* ptrTemp = node1;
-  while (ptrTemp != nullptr) {
-    std::cout << ptrTemp->num << '\n';
-    ptrTemp = ptrTemp->next;
-  }
-  return 0;
+  Node<int>* third = new Node<int>;
+  third->data = 3;
+  second->next = third;
 }
