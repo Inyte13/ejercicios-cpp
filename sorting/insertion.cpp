@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void insertionSort(std::vector<int>& vec) {
+void insertion_sort(std::vector<int>& vec) {
   for (int i = 1; i < vec.size(); i++) {
     int target = vec[i];
     int j = i - 1;
@@ -15,7 +15,7 @@ void insertionSort(std::vector<int>& vec) {
 
 int main() {
   std::vector<int> vec = {1, 5, 3};
-  insertionSort(vec);
+  insertion_sort(vec);
   for (int n : vec) {
     std::cout << n << " ";
   }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void selectionSort(std::vector<int>& vec) {
+void selection_sort(std::vector<int>& vec) {
   for (int i = 0; i < vec.size(); i++) {
     int target = vec[i];
     int min = i;
@@ -17,7 +17,7 @@ void selectionSort(std::vector<int>& vec) {
 
 int main() {
   std::vector<int> vec = {5, 1, 3, 2};
-  selectionSort(vec);
+  selection_sort(vec);
   for (int n : vec) {
     std::cout << n << " ";
   }
