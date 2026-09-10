@@ -4,11 +4,12 @@
 #include <iostream>
 
 int mcd(int a, int b) {
-  for (int i = std::min(a, b); i > 2; i--) {
+  for (int i = std::min(a, b); i > 1; i--) {
     if (a % i == 0 && b % i == 0) {
       return i;
     }
   }
+  return 1;
 }
 
 int main() {
@@ -17,7 +18,7 @@ int main() {
   auto end = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration<double>(end - start).count();
   std::cout << "MCD: " << result << "\n";
-  std::cout << std::fixed << std::setprecision(2);
+  std::cout << std::fixed << std::setprecision(9);
   std::cout << "Tiempo ejecución: " << duration << "s" << "\n";
   return 0;
 }
