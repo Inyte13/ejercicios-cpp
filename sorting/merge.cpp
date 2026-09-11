@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> merge(std::vector<int> vec1, std::vector<int> vec2) {
-  std::vector<int> lista_ordenada;
-  int i = 0;
-  int j = 0;
+template <typename T>
+std::vector<T> merge(std::vector<T> vec1, std::vector<T> vec2) {
+  std::vector<T> lista_ordenada;
+  T i = 0;
+  T j = 0;
   while (i < vec1.size() && j < vec2.size()) {
     if (vec1[i] >= vec2[j]) {
       lista_ordenada.push_back(vec2[j]);
@@ -25,15 +26,16 @@ std::vector<int> merge(std::vector<int> vec1, std::vector<int> vec2) {
   return lista_ordenada;
 }
 
-std::vector<int> merge_sort(std::vector<int> vec) {
+template <typename T>
+std::vector<T> merge_sort(std::vector<T> vec) {
   if (vec.size() <= 1) {
     return vec;
   }
-  int mitad = vec.size() / 2;
-  std::vector<int> izq(vec.begin(), vec.begin() + mitad);
-  std::vector<int> der(vec.begin() + mitad, vec.end());
-  std::vector<int> izq_ordenada = merge_sort(izq);
-  std::vector<int> der_ordenada = merge_sort(der);
+  T mitad = vec.size() / 2;
+  std::vector<T> izq(vec.begin(), vec.begin() + mitad);
+  std::vector<T> der(vec.begin() + mitad, vec.end());
+  std::vector<T> izq_ordenada = merge_sort(izq);
+  std::vector<T> der_ordenada = merge_sort(der);
   return merge(izq_ordenada, der_ordenada);
 }
 
