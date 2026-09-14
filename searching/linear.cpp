@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+#include "./constants.h"
+
 bool linear_search(std::string text, std::string target) {
   int final_valido = text.length() - target.length();
   for (int inicio = 0; inicio <= final_valido; inicio++) {
@@ -19,7 +21,7 @@ bool linear_search(std::string text, std::string target) {
 
 int main() {
   auto start = std::chrono::high_resolution_clock::now();
-  int result = linear_search("hola mundo", "mundo");
+  bool result = linear_search(text, target);
   auto end = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration<double>(end - start).count();
   std::cout << (result ? "La palabra se encontró" : "La palabra no se encontró")
