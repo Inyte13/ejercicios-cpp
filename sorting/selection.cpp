@@ -6,7 +6,6 @@ void selection_sort(std::vector<T>& vec) {
   for (int i = 0; i < vec.size(); i++) {
     int min = i;
     for (int j = i + 1; j < vec.size(); j++) {
-      std::cout << "¡Comparación!" << '\n';
       if (vec[min] > vec[j]) {
         min = j;
       }
@@ -15,7 +14,6 @@ void selection_sort(std::vector<T>& vec) {
       T target = vec[i];
       vec[i] = vec[min];
       vec[min] = target;
-      std::cout << "¡Intercambio!" << '\n';
     }
   }
 }
